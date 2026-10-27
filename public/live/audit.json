@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-10-27T18:12:42.869544+00:00",
+  "checkedAt": "2026-10-27T22:32:22.869787+00:00",
   "fullScan": true,
   "candidates": 372,
   "checked": 372,
-  "decoded": 201,
+  "decoded": 200,
   "uniqueRoutes": 369,
-  "decodedRoutes": 199,
+  "decodedRoutes": 198,
   "sourceErrors": [],
   "results": [
     {
@@ -326,7 +326,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 5
+      "decodedSamples": 6
     },
     {
       "name": "湖南卫视",
@@ -354,7 +354,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 5
+      "decodedSamples": 6
     },
     {
       "name": "江西卫视",
@@ -464,7 +464,7 @@
       "ok": false,
       "width": 720,
       "height": 576,
-      "decodedSamples": 6
+      "decodedSamples": 5
     },
     {
       "name": "新疆卫视",
@@ -562,7 +562,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 6
+      "decodedSamples": 4
     },
     {
       "name": "内蒙古卫视",
@@ -880,7 +880,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 5
+      "decodedSamples": 4
     },
     {
       "name": "新视觉",
@@ -959,8 +959,10 @@
       "metadata": {
         "tvg-id": "七台河新闻综合"
       },
-      "ok": false,
-      "error": "TimeoutError"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "万州三峡移民",
@@ -1190,7 +1192,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 6
+      "decodedSamples": 5
     },
     {
       "name": "伊犁维吾尔",
@@ -1524,7 +1526,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 5
+      "decodedSamples": 6
     },
     {
       "name": "固镇新闻",
@@ -1575,10 +1577,8 @@
       "metadata": {
         "tvg-id": "定襄综合"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "嵊州新闻综合",
@@ -2122,7 +2122,7 @@
         "tvg-id": "汾西综合"
       },
       "ok": false,
-      "error": "decode_timeout"
+      "error": "URLError"
     },
     {
       "name": "沐川综合",
@@ -2955,10 +2955,10 @@
       "metadata": {
         "tvg-id": "西峰综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "诸暨新闻综合",
@@ -3042,7 +3042,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 6
+      "decodedSamples": 5
     },
     {
       "name": "辽宁经济",
@@ -3317,10 +3317,10 @@
       "metadata": {
         "tvg-id": "青川综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "青田电视台",
@@ -3665,10 +3665,8 @@
       "metadata": {
         "tvg-id": "纪实科教"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "舒兰新闻",
@@ -4792,7 +4790,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 6
+      "decodedSamples": 5
     },
     {
       "name": "伊犁维吾尔",
