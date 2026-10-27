@@ -138,7 +138,9 @@ def main():
             rows.extend(download(source))
         except Exception as error:
             errors.append(dict(source=source, error=type(error).__name__))
-    unique = { (row["url"], tuple(sorted(row["headers"].items()))): row for row in rows }
+    # A URL can appear in more than one publisher group; retain every channel/group label.
+    unique = {(row['name'], row['group'], row['url'], tuple(sorted(row['headers'].items())),
+               tuple(sorted(row.get('metadata', {}).items()))): row for row in rows}
     candidates = list(unique.values())
     # Publish every candidate, including unverified ones, for device-side checking.
     # A complete failed download must not replace the previous candidate directory.
@@ -168,7 +170,10 @@ def main():
         temp.write_text(m3u(verified), encoding="utf-8")
         temp.replace(args.output / "channels.m3u")
     report = dict(checkedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(), fullScan=args.limit == 0,
-                  candidates=len(candidates), checked=len(results), decoded=len(verified), sourceErrors=errors, results=results)
+                  candidates=len(candidates), checked=len(results), decoded=len(verified),
+                  uniqueRoutes=len({(row['url'], tuple(sorted(row['headers'].items()))) for row in candidates}),
+                  decodedRoutes=len({(row['url'], tuple(sorted(row['headers'].items()))) for row in verified}),
+                  sourceErrors=errors, results=results)
     (args.output / "audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"candidates={len(candidates)} checked={len(results)} decoded={len(verified)} sourceErrors={len(errors)}")
     return 0 if verified else 1

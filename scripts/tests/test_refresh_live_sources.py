@@ -12,6 +12,17 @@ spec.loader.exec_module(collector)
 
 
 class CollectorTests(unittest.TestCase):
+    def test_shared_url_keeps_each_published_channel_and_group(self):
+        rows = [dict(name='儿童轮播', group='儿童频道', url='https://example.org/shared', headers={}, source='https://example.org/list'),
+                dict(name='特色动画', group='特色直播', url='https://example.org/shared', headers={}, source='https://example.org/list')]
+        with tempfile.TemporaryDirectory() as folder:
+            with mock.patch('sys.argv', ['collector', '--output', folder, '--catalog-only']), mock.patch.object(collector, 'download', return_value=rows):
+                self.assertEqual(0, collector.main())
+            text = (pathlib.Path(folder) / 'candidates.m3u').read_text(encoding='utf-8')
+            self.assertEqual(2, text.count('#EXTINF:'))
+            self.assertIn('儿童轮播', text)
+            self.assertIn('特色动画', text)
+
     def test_480p_archive_is_eligible_without_lowering_normal_channel_requirement(self):
         row = dict(name='1987年春晚', group='春晚频道', url='https://example.org/old.m3u8', headers={})
         result = subprocess.CompletedProcess([], 0, b'', b'Stream #0: Video: h264, yuv420p, 640x480\nframe=    6 fps=1\n')
