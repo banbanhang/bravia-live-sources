@@ -1,6 +1,8 @@
 import importlib.util
+import io
 import pathlib
 import tempfile
+import subprocess
 import unittest
 from unittest import mock
 
@@ -10,6 +12,13 @@ spec.loader.exec_module(collector)
 
 
 class CollectorTests(unittest.TestCase):
+    def test_480p_archive_is_eligible_without_lowering_normal_channel_requirement(self):
+        row = dict(name='1987年春晚', group='春晚频道', url='https://example.org/old.m3u8', headers={})
+        result = subprocess.CompletedProcess([], 0, b'', b'Stream #0: Video: h264, yuv420p, 640x480\nframe=    6 fps=1\n')
+        with mock.patch.object(collector.urllib.request, 'urlopen', side_effect=lambda *a, **k: io.BytesIO(b'media')), mock.patch.object(collector.subprocess, 'run', return_value=result):
+            self.assertTrue(collector.probe(row, 'ffmpeg')['ok'])
+            self.assertFalse(collector.probe(dict(row, group='央视频道'), 'ffmpeg')['ok'])
+
     def test_metadata_and_special_groups_survive_publication(self):
         text = '#EXTM3U\n#EXTINF:-1 group-title="春晚频道" tvg-id="spring.cn" tvg-language="zho",2005年春晚\nhttps://example.org/spring.m3u8'
         rows = collector.parse(text, 'https://example.org/list')

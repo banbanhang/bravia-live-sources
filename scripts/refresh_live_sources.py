@@ -97,7 +97,8 @@ def probe(row, ffmpeg):
         video = re.search(r"Video:.*?\b(\d{3,5})x(\d{3,5})\b", log)
         frames = [int(n) for n in re.findall(r"frame=\s*(\d+)", log)]
         width, height = (int(video[1]), int(video[2])) if video else (0, 0)
-        return dict(row, ok=run.returncode == 0 and max(frames, default=0) >= 3 and height >= 720,
+        minimum = 480 if row.get('group') == '春晚频道' else 720
+        return dict(row, ok=run.returncode == 0 and max(frames, default=0) >= 3 and height >= minimum,
                     width=width, height=height, decodedSamples=max(frames, default=0))
     except subprocess.TimeoutExpired:
         return dict(row, ok=False, error="decode_timeout")
