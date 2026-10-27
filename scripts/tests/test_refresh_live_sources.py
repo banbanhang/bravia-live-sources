@@ -1,0 +1,51 @@
+import importlib.util
+import pathlib
+import tempfile
+import unittest
+from unittest import mock
+
+spec = importlib.util.spec_from_file_location("collector", pathlib.Path(__file__).parents[1] / "refresh_live_sources.py")
+collector = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(collector)
+
+
+class CollectorTests(unittest.TestCase):
+    def test_m3u_headers_and_placeholder(self):
+        rows = collector.parse('#EXTM3U\n#EXTINF:-1 group-title="央视,卫视",CCTV1\n#EXTVLCOPT:http-referrer=https://example.org/\nhttps://example.org/1.m3u8\n#EXTINF:-1 group-title="更新时间",2026-10-27\nhttps://example.org/date.mp4', 'https://example.org/list')
+        self.assertEqual(1, len(rows))
+        self.assertEqual('央视,卫视', rows[0]['group'])
+        self.assertEqual('https://example.org/', rows[0]['headers']['Referer'])
+        self.assertEqual(rows, collector.parse(collector.m3u(rows), 'https://example.org/list'))
+
+    def test_txt_multi_routes_and_no_header_leak(self):
+        rows = collector.parse('央视,#genre#\nCCTV1,https://example.org/a#https://example.org/b|User-Agent=My+TV\nCCTV2,https://example.org/c', 'https://example.org/list')
+        self.assertEqual(3, len(rows))
+        self.assertEqual('My TV', rows[1]['headers']['User-Agent'])
+        self.assertEqual({}, rows[2]['headers'])
+
+    def test_credentials_and_header_injection_rejected(self):
+        self.assertFalse(collector.web_url('https://u:p@example.org/a'))
+        self.assertFalse(collector.web_url('file:///a'))
+        rows = collector.parse('A,https://example.org/a|User-Agent=a%0d%0aInjected:b', 'https://example.org/list')
+        self.assertEqual([], rows)
+
+    def test_failed_decode_does_not_replace_previous_working_list(self):
+        row = dict(name='CCTV1', group='央视', url='https://example.org/live', headers={}, source='https://example.org/list')
+        with tempfile.TemporaryDirectory() as folder:
+            target = pathlib.Path(folder) / 'channels.m3u'
+            target.write_text('#EXTM3U\nprevious working list\n', encoding='utf-8')
+            with mock.patch('sys.argv', ['collector', '--output', folder]), mock.patch.object(collector, 'download', return_value=[row]), mock.patch.object(collector, 'probe', return_value=dict(row, ok=False)):
+                self.assertEqual(1, collector.main())
+            self.assertIn('previous working list', target.read_text(encoding='utf-8'))
+            self.assertTrue((pathlib.Path(folder) / 'audit.json').exists())
+
+    def test_successful_decode_publishes_new_list(self):
+        row = dict(name='CCTV1', group='央视', url='https://example.org/live', headers={}, source='https://example.org/list')
+        with tempfile.TemporaryDirectory() as folder:
+            with mock.patch('sys.argv', ['collector', '--output', folder]), mock.patch.object(collector, 'download', return_value=[row]), mock.patch.object(collector, 'probe', return_value=dict(row, ok=True, width=1920, height=1080, decodedSamples=6)):
+                self.assertEqual(0, collector.main())
+            self.assertIn('CCTV1', (pathlib.Path(folder) / 'channels.m3u').read_text(encoding='utf-8'))
+
+
+if __name__ == '__main__':
+    unittest.main()

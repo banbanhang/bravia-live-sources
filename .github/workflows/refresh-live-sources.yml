@@ -1,0 +1,41 @@
+name: Refresh public live sources
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: live-source-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install decoder
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Test collector
+        run: python -m unittest discover -s scripts/tests -p 'test_*.py'
+      - name: Collect and decode
+        run: python scripts/refresh_live_sources.py --output public/live --limit 120 --workers 4
+      - name: Retain audit even when no stream decodes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-source-audit
+          path: public/live/
+          retention-days: 7
+      - name: Publish successful list to this repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/live/channels.m3u public/live/audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update decoded public live sources [skip ci]'
+            git push
+          fi
