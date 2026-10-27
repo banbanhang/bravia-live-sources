@@ -16,6 +16,7 @@ SOURCES = [
     "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
     "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
 ]
+NOTICE_LABELS = {"更新时间", "支持作者", "赞助作者", "打赏", "订阅说明", "更新说明"}
 
 
 def web_url(url):
@@ -56,7 +57,7 @@ def parse(text, source):
                     canonical = {"referer": "Referer", "referrer": "Referer", "user-agent": "User-Agent"}.get(key.lower())
                     if canonical:
                         route_headers[canonical] = value
-                if name.strip() and web_url(url) and group != "更新时间" and not re.fullmatch(r"\d{4}-\d\d-\d\d.*", name.strip()):
+                if name.strip() and web_url(url) and group.strip() not in NOTICE_LABELS and name.strip() not in NOTICE_LABELS and not re.fullmatch(r"\d{4}-\d\d-\d\d.*", name.strip()):
                     if all("\r" not in value and "\n" not in value for value in route_headers.values()):
                         rows.append(dict(name=name.strip(), group=group, url=url, headers=route_headers, source=source))
             name, headers = "", {}

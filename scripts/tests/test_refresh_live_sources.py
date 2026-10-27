@@ -10,6 +10,11 @@ spec.loader.exec_module(collector)
 
 
 class CollectorTests(unittest.TestCase):
+    def test_support_author_video_is_not_a_tv_channel(self):
+        text = '#EXTM3U\n#EXTINF:-1,支持作者\nhttps://example.org/support.mp4\n#EXTINF:-1,CCTV13\nhttps://example.org/live.m3u8'
+        rows = collector.parse(text, 'https://example.org/list')
+        self.assertEqual(['CCTV13'], [row['name'] for row in rows])
+
     def test_m3u_headers_and_placeholder(self):
         rows = collector.parse('#EXTM3U\n#EXTINF:-1 group-title="央视,卫视",CCTV1\n#EXTVLCOPT:http-referrer=https://example.org/\nhttps://example.org/1.m3u8\n#EXTINF:-1 group-title="更新时间",2026-10-27\nhttps://example.org/date.mp4', 'https://example.org/list')
         self.assertEqual(1, len(rows))
