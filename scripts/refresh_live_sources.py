@@ -29,7 +29,7 @@ def web_url(url):
 
 def parse(text, source):
     """M3U / name,url TXT; keep only the headers supported by the Android app."""
-    rows, name, group, headers = [], "", "", {}
+    rows, name, group, headers, metadata = [], "", "", {}, {}
     for raw in text.splitlines():
         line = raw.strip().lstrip("\ufeff")
         if line.startswith("#EXTINF:"):
@@ -37,6 +37,7 @@ def parse(text, source):
             name = line[title.end():].strip() if title else ""
             match = re.search(r'group-title="([^"]*)"', line)
             group = match[1] if match else ""
+            metadata = dict(re.findall(r'(tvg-id|tvg-language|tvg-country)="([^"]*)"', line))
             headers = {}
         elif line.startswith("#EXTVLCOPT:"):
             key, _, value = line.partition(":")[2].partition("=")
@@ -59,8 +60,8 @@ def parse(text, source):
                         route_headers[canonical] = value
                 if name.strip() and web_url(url) and group.strip() not in NOTICE_LABELS and name.strip() not in NOTICE_LABELS and not re.fullmatch(r"\d{4}-\d\d-\d\d.*", name.strip()):
                     if all("\r" not in value and "\n" not in value for value in route_headers.values()):
-                        rows.append(dict(name=name.strip(), group=group, url=url, headers=route_headers, source=source))
-            name, headers = "", {}
+                        rows.append(dict(name=name.strip(), group=group, url=url, headers=route_headers, source=source, metadata=metadata.copy()))
+            name, headers, metadata = "", {}, {}
     return rows
 
 
@@ -108,7 +109,9 @@ def m3u(rows):
         # Publisher text may contain quotes; do not allow it to inject playlist directives.
         name = row["name"].replace("\r", " ").replace("\n", " ")
         group = row["group"].replace('"', "'").replace("\r", " ").replace("\n", " ")
-        output.append(f'#EXTINF:-1 group-title="{group}",{name}')
+        attrs = ''.join(f' {key}="{str(value).replace(chr(34), chr(39)).replace(chr(13), " ").replace(chr(10), " ")}"'
+                        for key, value in row.get('metadata', {}).items() if key in ('tvg-id', 'tvg-language', 'tvg-country'))
+        output.append(f'#EXTINF:-1 group-title="{group}"{attrs},{name}')
         for key, value in row["headers"].items():
             option = {"Referer": "http-referrer", "User-Agent": "http-user-agent"}[key]
             output.append(f"#EXTVLCOPT:{option}={value}")
@@ -121,9 +124,12 @@ def main():
     parser.add_argument("--source", action="append", help="repeatable public playlist URL; defaults to the two reviewed directories")
     parser.add_argument("--output", type=pathlib.Path, default=pathlib.Path("public/live"))
     parser.add_argument("--ffmpeg", default="ffmpeg")
-    parser.add_argument("--limit", type=int, default=120)
+    parser.add_argument("--limit", type=int, default=0, help="0 checks the full directory; positive values are bounded audits")
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--catalog-only", action="store_true", help="publish the complete unverified candidate directory without decoding")
     args = parser.parse_args()
+    if args.limit < 0:
+        parser.error('--limit must be 0 or positive')
     args.output.mkdir(parents=True, exist_ok=True)
     rows, errors = [], []
     for source in args.source or SOURCES:
@@ -133,20 +139,34 @@ def main():
             errors.append(dict(source=source, error=type(error).__name__))
     unique = { (row["url"], tuple(sorted(row["headers"].items()))): row for row in rows }
     candidates = list(unique.values())
+    # Publish every candidate, including unverified ones, for device-side checking.
+    # A complete failed download must not replace the previous candidate directory.
+    if candidates:
+        temp = args.output / "candidates.m3u.tmp"
+        temp.write_text(m3u(candidates), encoding="utf-8")
+        temp.replace(args.output / "candidates.m3u")
+    if args.catalog_only:
+        print(f"candidates={len(candidates)} sourceErrors={len(errors)} catalogOnly=true")
+        return 0 if candidates else 1
     # Round-robin stations before testing multiple backups of the same station.
     groups = {}
     for row in candidates:
         groups.setdefault(row["name"], []).append(row)
     ordered = [group[i] for i in range(max(map(len, groups.values()), default=0)) for group in groups.values() if i < len(group)]
     with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, min(args.workers, 8))) as pool:
-        results = list(pool.map(lambda row: probe(row, args.ffmpeg), ordered[:max(1, args.limit)]))
+        selected = ordered if args.limit == 0 else ordered[:args.limit]
+        results = []
+        for index, result in enumerate(pool.map(lambda row: probe(row, args.ffmpeg), selected), 1):
+            results.append(result)
+            if index % 25 == 0 or index == len(selected):
+                print(f"progress={index}/{len(selected)} decoded={sum(bool(row['ok']) for row in results)}", flush=True)
     verified = [row for row in results if row["ok"]]
     # A failed run must not replace the previously published working list with an empty file.
     if verified:
         temp = args.output / "channels.m3u.tmp"
         temp.write_text(m3u(verified), encoding="utf-8")
         temp.replace(args.output / "channels.m3u")
-    report = dict(checkedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    report = dict(checkedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(), fullScan=args.limit == 0,
                   candidates=len(candidates), checked=len(results), decoded=len(verified), sourceErrors=errors, results=results)
     (args.output / "audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"candidates={len(candidates)} checked={len(results)} decoded={len(verified)} sourceErrors={len(errors)}")

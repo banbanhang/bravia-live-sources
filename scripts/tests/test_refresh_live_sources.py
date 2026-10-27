@@ -10,6 +10,29 @@ spec.loader.exec_module(collector)
 
 
 class CollectorTests(unittest.TestCase):
+    def test_metadata_and_special_groups_survive_publication(self):
+        text = '#EXTM3U\n#EXTINF:-1 group-title="春晚频道" tvg-id="spring.cn" tvg-language="zho",2005年春晚\nhttps://example.org/spring.m3u8'
+        rows = collector.parse(text, 'https://example.org/list')
+        self.assertEqual('春晚频道', rows[0]['group'])
+        self.assertEqual('zho', rows[0]['metadata']['tvg-language'])
+        self.assertEqual(rows, collector.parse(collector.m3u(rows), 'https://example.org/list'))
+
+    def test_catalog_only_keeps_every_candidate_without_claiming_playability(self):
+        rows = [dict(name=str(i), group='直播中国', url=f'https://example.org/{i}', headers={}, source='https://example.org/list') for i in range(130)]
+        with tempfile.TemporaryDirectory() as folder:
+            with mock.patch('sys.argv', ['collector', '--output', folder, '--catalog-only']), mock.patch.object(collector, 'download', return_value=rows), mock.patch.object(collector, 'probe') as probe:
+                self.assertEqual(0, collector.main())
+                probe.assert_not_called()
+            self.assertEqual(130, (pathlib.Path(folder) / 'candidates.m3u').read_text(encoding='utf-8').count('#EXTINF:'))
+            self.assertFalse((pathlib.Path(folder) / 'channels.m3u').exists())
+
+    def test_default_decode_covers_more_than_first_120_routes(self):
+        rows = [dict(name=str(i), group='电影频道', url=f'https://example.org/{i}', headers={}, source='https://example.org/list') for i in range(130)]
+        with tempfile.TemporaryDirectory() as folder:
+            with mock.patch('sys.argv', ['collector', '--output', folder]), mock.patch.object(collector, 'download', return_value=rows), mock.patch.object(collector, 'probe', side_effect=lambda row, _: dict(row, ok=True)) as probe:
+                self.assertEqual(0, collector.main())
+                self.assertEqual(130, probe.call_count)
+
     def test_support_author_video_is_not_a_tv_channel(self):
         text = '#EXTM3U\n#EXTINF:-1,支持作者\nhttps://example.org/support.mp4\n#EXTINF:-1,CCTV13\nhttps://example.org/live.m3u8'
         rows = collector.parse(text, 'https://example.org/list')
