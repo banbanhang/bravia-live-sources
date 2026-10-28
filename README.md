@@ -6,7 +6,7 @@
 
 完整候选目录：https://raw.githubusercontent.com/banbanhang/bravia-live-sources/main/public/live/candidates.m3u
 
-完整目录保留原始分组及 tvg-id / tvg-language / tvg-country；候选尚未验证，不表示可以播放。应用在本机完成检查后才显示可播线路。
+完整目录保留原始分组及 tvg-id / tvg-language / tvg-country；候选尚未验证，不表示可以播放。应用分别显示目录条目与线路检查状态。
 
 候选目录只合并完全相同的频道/分组/地址/请求头/元数据记录；同一地址在不同频道或分组下的条目不再被覆盖。应用目录保留尚未检查或检查失败的条目并标注状态，用户可确认后手动尝试；目录存在不等于播放成功。
 
