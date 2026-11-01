@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-01T18:07:44.517567+00:00",
+  "checkedAt": "2026-11-01T22:21:11.735366+00:00",
   "fullScan": true,
   "candidates": 501,
   "checked": 501,
-  "decoded": 261,
+  "decoded": 244,
   "uniqueRoutes": 498,
-  "decodedRoutes": 260,
+  "decodedRoutes": 242,
   "sourceErrors": [],
   "results": [
     {
@@ -17,10 +17,8 @@
       "metadata": {
         "tvg-id": "CCTV3"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 5
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "CCTV5",
@@ -384,7 +382,7 @@
         "tvg-id": "51"
       },
       "ok": false,
-      "error": "TimeoutError"
+      "error": "decode_timeout"
     },
     {
       "name": "四川卫视",
@@ -410,7 +408,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 5
+      "decodedSamples": 6
     },
     {
       "name": "西藏卫视",
@@ -424,7 +422,7 @@
       "ok": false,
       "width": 720,
       "height": 576,
-      "decodedSamples": 5
+      "decodedSamples": 6
     },
     {
       "name": "新疆卫视",
@@ -597,10 +595,8 @@
       "metadata": {
         "tvg-id": "东阳影视生活"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "人在囧途",
@@ -850,7 +846,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 5
+      "decodedSamples": 6
     },
     {
       "name": "浙江少儿",
@@ -995,10 +991,10 @@
       "metadata": {
         "tvg-id": "上虞新闻综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "东丰综合",
@@ -1099,10 +1095,8 @@
       "metadata": {
         "tvg-id": "云和新闻综合"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "云霄综合",
@@ -1186,7 +1180,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 6
+      "decodedSamples": 4
     },
     {
       "name": "伊犁经济法制",
@@ -1214,7 +1208,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 5
+      "decodedSamples": 6
     },
     {
       "name": "余姚姚江文化",
@@ -1226,9 +1220,7 @@
         "tvg-id": "余姚姚江文化"
       },
       "ok": false,
-      "width": 720,
-      "height": 576,
-      "decodedSamples": 6
+      "error": "URLError"
     },
     {
       "name": "余姚新闻综合",
@@ -1239,10 +1231,8 @@
       "metadata": {
         "tvg-id": "余姚新闻综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "余姚综合",
@@ -1337,10 +1327,10 @@
       "metadata": {
         "tvg-id": "兴隆综合"
       },
-      "ok": false,
+      "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 1
+      "decodedSamples": 6
     },
     {
       "name": "兵团五师双河新闻综合",
@@ -1352,9 +1342,7 @@
         "tvg-id": "兵团五师双河新闻综合"
       },
       "ok": false,
-      "width": 720,
-      "height": 576,
-      "decodedSamples": 6
+      "error": "HTTPError"
     },
     {
       "name": "兵团八师石河子新闻综合",
@@ -1458,9 +1446,9 @@
         "tvg-id": "古县综合"
       },
       "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "width": 720,
+      "height": 480,
+      "decodedSamples": 6
     },
     {
       "name": "句容党建",
@@ -1745,10 +1733,10 @@
       "metadata": {
         "tvg-id": "定襄综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "山东新闻",
@@ -1787,10 +1775,10 @@
       "metadata": {
         "tvg-id": "嵊州新闻综合"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "嵊泗综合",
@@ -1802,9 +1790,7 @@
         "tvg-id": "嵊泗综合"
       },
       "ok": false,
-      "width": 720,
-      "height": 576,
-      "decodedSamples": 6
+      "error": "URLError"
     },
     {
       "name": "常熟民生",
@@ -1841,10 +1827,8 @@
       "metadata": {
         "tvg-id": "平湖新闻综合"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "平湖民生休闲",
@@ -1870,7 +1854,7 @@
         "tvg-id": "平遥新闻综合"
       },
       "ok": false,
-      "error": "URLError"
+      "error": "HTTPError"
     },
     {
       "name": "广东民生",
@@ -2015,10 +1999,8 @@
       "metadata": {
         "tvg-id": "庆元新闻综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "延边2",
@@ -2041,10 +2023,8 @@
       "metadata": {
         "tvg-id": "开化国家公园"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "开化新闻综合",
@@ -2055,10 +2035,8 @@
       "metadata": {
         "tvg-id": "开化新闻综合"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "张掖新闻综合",
@@ -2069,10 +2047,10 @@
       "metadata": {
         "tvg-id": "张掖新闻综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "德惠综合",
@@ -2095,8 +2073,10 @@
       "metadata": {
         "tvg-id": "怀仁综合"
       },
-      "ok": false,
-      "error": "URLError"
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "敦化一套",
@@ -2171,10 +2151,10 @@
       "metadata": {
         "tvg-id": "新昌新闻综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "新昌生活",
@@ -2185,10 +2165,8 @@
       "metadata": {
         "tvg-id": "新昌生活"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "新沂新闻",
@@ -2295,10 +2273,10 @@
       "metadata": {
         "tvg-id": "晋江电视台"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "普陀电视台",
@@ -2309,10 +2287,10 @@
       "metadata": {
         "tvg-id": "普陀电视台"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "朝天综合",
@@ -2363,10 +2341,8 @@
       "metadata": {
         "tvg-id": "松阳综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "柳河综合",
@@ -2428,9 +2404,7 @@
         "tvg-id": "武义新闻综合"
       },
       "ok": false,
-      "width": 720,
-      "height": 576,
-      "decodedSamples": 6
+      "error": "decode_timeout"
     },
     {
       "name": "武汉一台新闻综合",
@@ -2626,9 +2600,7 @@
         "tvg-id": "洞头综合"
       },
       "ok": false,
-      "width": 720,
-      "height": 540,
-      "decodedSamples": 6
+      "error": "decode_timeout"
     },
     {
       "name": "津南一套",
@@ -2765,8 +2737,10 @@
       "metadata": {
         "tvg-id": "浙江民生休闲"
       },
-      "ok": false,
-      "error": "URLError"
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "浙江生活",
@@ -2861,10 +2835,8 @@
       "metadata": {
         "tvg-id": "浙江钱江"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "浙江钱江都市",
@@ -3337,10 +3309,8 @@
       "metadata": {
         "tvg-id": "缙云新闻综合"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "缙云综合",
@@ -3351,10 +3321,8 @@
       "metadata": {
         "tvg-id": "缙云新闻综合"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "舒兰新闻综合",
@@ -3377,10 +3345,10 @@
       "metadata": {
         "tvg-id": "苍南新闻综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "苏州文化生活",
@@ -3501,10 +3469,10 @@
       "metadata": {
         "tvg-id": "萧山新闻综合"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "萧山生活",
@@ -3515,10 +3483,8 @@
       "metadata": {
         "tvg-id": "萧山生活"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "萧山综合",
@@ -3883,10 +3849,8 @@
       "metadata": {
         "tvg-id": "长子综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "长影频道",
@@ -3898,7 +3862,9 @@
         "tvg-id": "长影频道"
       },
       "ok": false,
-      "error": "URLError"
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "长沙新闻综合",
@@ -4212,9 +4178,7 @@
         "tvg-id": "兵团五师双河影"
       },
       "ok": false,
-      "width": 720,
-      "height": 576,
-      "decodedSamples": 6
+      "error": "HTTPError"
     },
     {
       "name": "双辽",
@@ -6498,7 +6462,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 6
+      "decodedSamples": 5
     },
     {
       "name": "嵊州新闻综合",
