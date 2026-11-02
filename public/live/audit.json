@@ -1,24 +1,60 @@
 {
-  "checkedAt": "2026-11-01T22:21:11.735366+00:00",
+  "checkedAt": "2026-11-02T06:36:20.732872+00:00",
   "fullScan": true,
-  "candidates": 501,
-  "checked": 501,
-  "decoded": 244,
-  "uniqueRoutes": 498,
-  "decodedRoutes": 242,
+  "candidates": 499,
+  "checked": 499,
+  "decoded": 259,
+  "uniqueRoutes": 496,
+  "decodedRoutes": 257,
   "sourceErrors": [],
   "results": [
     {
-      "name": "CCTV3",
+      "name": "CCTV1",
       "group": "央视频道",
-      "url": "http://222.169.85.8:9901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "url": "http://115.48.161.74:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "CCTV3"
+        "tvg-id": "26"
       },
       "ok": false,
-      "error": "decode_timeout"
+      "error": "TimeoutError"
+    },
+    {
+      "name": "CCTV2",
+      "group": "央视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "18"
+      },
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "name": "CCTV3",
+      "group": "央视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "17"
+      },
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "name": "CCTV4",
+      "group": "央视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0004_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "22"
+      },
+      "ok": false,
+      "error": "TimeoutError"
     },
     {
       "name": "CCTV5",
@@ -27,10 +63,22 @@
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "88"
+        "tvg-id": "90"
       },
       "ok": false,
       "error": "decode_timeout"
+    },
+    {
+      "name": "CCTV7",
+      "group": "央视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "21"
+      },
+      "ok": false,
+      "error": "TimeoutError"
     },
     {
       "name": "CCTV8",
@@ -43,6 +91,42 @@
       },
       "ok": false,
       "error": "decode_timeout"
+    },
+    {
+      "name": "CCTV9",
+      "group": "央视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0009_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "22"
+      },
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "name": "CCTV10",
+      "group": "央视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "23"
+      },
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "name": "CCTV11",
+      "group": "央视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "21"
+      },
+      "ok": false,
+      "error": "TimeoutError"
     },
     {
       "name": "CCTV12",
@@ -71,16 +155,32 @@
       "decodedSamples": 6
     },
     {
-      "name": "CCTV15",
+      "name": "CCTV14",
       "group": "央视频道",
-      "url": "http://gmxw.7766.org:808/hls/102/index.m3u8",
+      "url": "http://115.48.161.74:9901/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "59"
+        "tvg-id": "22"
       },
       "ok": false,
-      "error": "decode_timeout"
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
+    },
+    {
+      "name": "CCTV15",
+      "group": "央视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "23"
+      },
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "CCTV16",
@@ -95,52 +195,18 @@
       "error": "decode_timeout"
     },
     {
-      "name": "CCTV17",
-      "group": "央视频道",
-      "url": "https://live.264788.xyz/channel/cctv17?streamid=348c8c0c04a6d2b900e5a3bcb4af8ce1&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "CCTV-17"
-      },
-      "ok": false,
-      "error": "HTTPError"
-    },
-    {
-      "name": "CCTV怀旧剧场",
-      "group": "央视频道",
-      "url": "https://live.264788.xyz/channel/huaijiujuchang?streamid=7e5d1abdddde08f588234f3f640f75ff&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "怀旧剧场"
-      },
-      "ok": false,
-      "error": "HTTPError"
-    },
-    {
-      "name": "CCTV第一剧场",
-      "group": "央视频道",
-      "url": "https://live.264788.xyz/channel/diyijuchang?streamid=e9b0fb1ca135a4aeae12944494883794&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "第一剧场"
-      },
-      "ok": false,
-      "error": "HTTPError"
-    },
-    {
       "name": "CGTN",
       "group": "央视频道",
-      "url": "https://0472.org/hls/cgtn.m3u8",
+      "url": "http://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "CGTN"
       },
-      "ok": false,
-      "error": "HTTPError"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "CGTN法语",
@@ -181,57 +247,35 @@
       "error": "HTTPError"
     },
     {
-      "name": "CCTV文化精品",
-      "group": "央视频道",
-      "url": "https://live.264788.xyz/channel/yangshiwenhuajingpin?streamid=bc185d1ef1e528922e83efd845006277&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "文化精品"
-      },
-      "ok": false,
-      "error": "HTTPError"
-    },
-    {
-      "name": "兵器科技",
-      "group": "央视频道",
-      "url": "https://live.264788.xyz/channel/bingqikeji?streamid=6fc55a0966bdad1e1cdf39a4d37dd776&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "兵器科技"
-      },
-      "ok": false,
-      "error": "HTTPError"
-    },
-    {
-      "name": "风云剧场",
-      "group": "央视频道",
-      "url": "https://live.264788.xyz/channel/fengyunjuchang?streamid=31e7b5b7032d25dd215a4069cdee1a48&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "风云剧场"
-      },
-      "ok": false,
-      "error": "HTTPError"
-    },
-    {
       "name": "安徽卫视",
       "group": "卫视频道",
       "url": "http://gmxw.7766.org:808/hls/40/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "51"
+        "tvg-id": "54"
       },
       "ok": false,
       "error": "decode_timeout"
     },
     {
+      "name": "北京卫视",
+      "group": "卫视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0122_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "28"
+      },
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
+    },
+    {
       "name": "东方卫视",
       "group": "卫视频道",
-      "url": "http://bp-resource-dfl.bestv.cn/148/3/video.m3u8",
+      "url": "http://bp-resource-dfl.bestv.cn/155/3/video.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
@@ -263,7 +307,7 @@
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "12"
+        "tvg-id": "14"
       },
       "ok": false,
       "error": "decode_timeout"
@@ -283,30 +327,58 @@
       "decodedSamples": 6
     },
     {
-      "name": "贵州卫视",
+      "name": "河南卫视",
       "group": "卫视频道",
-      "url": "https://live.264788.xyz/channel/guizhouweishi?streamid=091bd59ea031989839c23459bb8cc9d4&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
+      "url": "http://115.48.161.74:9901/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "贵州卫视"
+        "tvg-id": "15"
       },
       "ok": false,
-      "error": "HTTPError"
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
+    },
+    {
+      "name": "湖北卫视",
+      "group": "卫视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0132_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "25"
+      },
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "湖南卫视",
       "group": "卫视频道",
-      "url": "https://txmov2.a.kwimgs.com/bs3/video-hls/5199687338554291078_hlsb.m3u8",
+      "url": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "湖南卫视"
       },
       "ok": true,
-      "width": 1280,
-      "height": 720,
+      "width": 3840,
+      "height": 2160,
       "decodedSamples": 6
+    },
+    {
+      "name": "江苏卫视",
+      "group": "卫视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0127_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "28"
+      },
+      "ok": false,
+      "error": "TimeoutError"
     },
     {
       "name": "江西卫视",
@@ -329,22 +401,10 @@
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "53"
+        "tvg-id": "57"
       },
       "ok": false,
       "error": "decode_timeout"
-    },
-    {
-      "name": "宁夏卫视",
-      "group": "卫视频道",
-      "url": "https://live.264788.xyz/channel/ningxiaweishi?streamid=e1236348f815c36a0429357e5b5c5f10&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "宁夏卫视"
-      },
-      "ok": false,
-      "error": "HTTPError"
     },
     {
       "name": "山西卫视",
@@ -361,54 +421,30 @@
       "decodedSamples": 6
     },
     {
-      "name": "陕西卫视",
-      "group": "卫视频道",
-      "url": "https://live.264788.xyz/channel/shaanxiweishi?streamid=9dc887dba8ecb4e4143baf4f2373800c&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "陕西卫视"
-      },
-      "ok": false,
-      "error": "HTTPError"
-    },
-    {
       "name": "深圳卫视",
       "group": "卫视频道",
       "url": "http://gmxw.7766.org:808/hls/45/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "51"
+        "tvg-id": "52"
       },
       "ok": false,
-      "error": "decode_timeout"
-    },
-    {
-      "name": "四川卫视",
-      "group": "卫视频道",
-      "url": "https://live.264788.xyz/channel/sichuanweishi4k?streamid=401bf692a1a8b91298f26077d53316d6&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "四川卫视"
-      },
-      "ok": false,
-      "error": "HTTPError"
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "天津卫视",
       "group": "卫视频道",
-      "url": "http://222.169.85.8:9901/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "url": "http://115.48.161.74:9901/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "天津卫视"
+        "tvg-id": "30"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "TimeoutError"
     },
     {
       "name": "西藏卫视",
@@ -465,6 +501,20 @@
       "width": 1920,
       "height": 1080,
       "decodedSamples": 6
+    },
+    {
+      "name": "重庆卫视",
+      "group": "卫视频道",
+      "url": "http://115.48.161.74:9901/tsfile/live/0142_1.m3u8?key=txiptv&playlive=1&authid=0",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "25"
+      },
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "安多卫视",
@@ -595,8 +645,10 @@
       "metadata": {
         "tvg-id": "东阳影视生活"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "人在囧途",
@@ -835,20 +887,6 @@
       "decodedSamples": 6
     },
     {
-      "name": "四川科教",
-      "group": "数字频道",
-      "url": "http://182.150.115.21:8030/pcgacg/pcgacg_0.m3u8",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "四川科教"
-      },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
-    },
-    {
       "name": "浙江少儿",
       "group": "儿童频道",
       "url": "http://ali-m-l.cztv.com/channels/lantian/channel008/1080p.m3u8",
@@ -991,10 +1029,10 @@
       "metadata": {
         "tvg-id": "上虞新闻综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "东丰综合",
@@ -1095,13 +1133,15 @@
       "metadata": {
         "tvg-id": "云和新闻综合"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "云霄综合",
       "group": "地方频道",
-      "url": "https://live.zzyxxw.com:2443/live/xwzh.m3u8",
+      "url": "http://live.zzyxxw.com:85/live/xwzh.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
@@ -1180,7 +1220,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 4
+      "decodedSamples": 5
     },
     {
       "name": "伊犁经济法制",
@@ -1220,19 +1260,23 @@
         "tvg-id": "余姚姚江文化"
       },
       "ok": false,
-      "error": "URLError"
+      "width": 720,
+      "height": 576,
+      "decodedSamples": 6
     },
     {
       "name": "余姚新闻综合",
       "group": "地方频道",
-      "url": "http://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8",
+      "url": "http://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8?cWlkPSZzPTg3OWMwYmMyZDMzYTFhZGY3NDQxMjgyYTg1MmUzNTY0JmVzPTE3MDY2Nzc4NzMmdXVpZD0yMjdiY2MzNGNiNGY0MThlYjRiY2IxYzcwNmZjODNkMS02NzQ3NDY2NyZ2PTImYXM9MCZjZG5leF9pZD10eF9waG9uZV9saXZl",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "余姚新闻综合"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "余姚综合",
@@ -1251,7 +1295,7 @@
     {
       "name": "余杭未来E",
       "group": "地方频道",
-      "url": "http://l.cztvcloud.com/channels/lantian/SXyuhang3/720p.m3u8?zzhed",
+      "url": "http://l.cztvcloud.com/channels/lantian/SXyuhang3/720p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
@@ -1331,18 +1375,6 @@
       "width": 1920,
       "height": 1080,
       "decodedSamples": 6
-    },
-    {
-      "name": "兵团五师双河新闻综合",
-      "group": "地方频道",
-      "url": "http://liveout.btzx.com.cn/62ds9e/4nxdih.m3u8?fbl=",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "兵团五师双河新闻综合"
-      },
-      "ok": false,
-      "error": "HTTPError"
     },
     {
       "name": "兵团八师石河子新闻综合",
@@ -1446,9 +1478,7 @@
         "tvg-id": "古县综合"
       },
       "ok": false,
-      "width": 720,
-      "height": 480,
-      "decodedSamples": 6
+      "error": "decode_timeout"
     },
     {
       "name": "句容党建",
@@ -1605,7 +1635,7 @@
     {
       "name": "嘉兴新闻综合",
       "group": "地方频道",
-      "url": "http://tvfile.jyrmt.cn:80/nmip-media/channellive/channel104452/playlist.m3u8",
+      "url": "http://live.zohi.tv/video/s10001-fztv-1/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
@@ -1625,10 +1655,10 @@
       "metadata": {
         "tvg-id": "嘉峪关综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "width": 0,
+      "height": 0,
+      "decodedSamples": 0
     },
     {
       "name": "固镇新闻",
@@ -1739,6 +1769,18 @@
       "decodedSamples": 6
     },
     {
+      "name": "宿州科教",
+      "group": "地方频道",
+      "url": "http://live.ahsz.tv/video/s10001-kxjy/index.m3u8",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "宿州科教"
+      },
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
       "name": "山东新闻",
       "group": "地方频道",
       "url": "http://ls.qingting.fm/live/60180.m3u8",
@@ -1775,10 +1817,10 @@
       "metadata": {
         "tvg-id": "嵊州新闻综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "嵊泗综合",
@@ -1790,7 +1832,9 @@
         "tvg-id": "嵊泗综合"
       },
       "ok": false,
-      "error": "URLError"
+      "width": 720,
+      "height": 576,
+      "decodedSamples": 6
     },
     {
       "name": "常熟民生",
@@ -1827,8 +1871,10 @@
       "metadata": {
         "tvg-id": "平湖新闻综合"
       },
-      "ok": false,
-      "error": "URLError"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "平湖民生休闲",
@@ -1853,8 +1899,10 @@
       "metadata": {
         "tvg-id": "平遥新闻综合"
       },
-      "ok": false,
-      "error": "HTTPError"
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "广东民生",
@@ -1937,7 +1985,7 @@
     {
       "name": "广州综合",
       "group": "地方频道",
-      "url": "http://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=c8dbe86d6f86eb1a21999ab479fd5667&txTime=18d3c4690e8",
+      "url": "https://tencentplaybusiness.gztv.com/live/zonghes.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
@@ -1993,14 +2041,16 @@
     {
       "name": "庆元综合",
       "group": "地方频道",
-      "url": "http://l.cztvcloud.com/channels/lantian/SXqingyuan1/720p.m3u8?zzhed?",
+      "url": "http://l.cztvcloud.com/channels/lantian/SXqingyuan1/720p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "庆元新闻综合"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "延边2",
@@ -2023,8 +2073,10 @@
       "metadata": {
         "tvg-id": "开化国家公园"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "开化新闻综合",
@@ -2035,8 +2087,10 @@
       "metadata": {
         "tvg-id": "开化新闻综合"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "张掖新闻综合",
@@ -2047,10 +2101,10 @@
       "metadata": {
         "tvg-id": "张掖新闻综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "德惠综合",
@@ -2073,10 +2127,8 @@
       "metadata": {
         "tvg-id": "怀仁综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "敦化一套",
@@ -2131,7 +2183,7 @@
     {
       "name": "文成综合",
       "group": "地方频道",
-      "url": "http://l.cztvcloud.com/channels/lantian/SXwencheng1/720p.m3u8?zzhed?",
+      "url": "http://l.cztvcloud.com/channels/lantian/SXwencheng1/720p.m3u8?zzhed",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
@@ -2151,10 +2203,10 @@
       "metadata": {
         "tvg-id": "新昌新闻综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "新昌生活",
@@ -2165,8 +2217,10 @@
       "metadata": {
         "tvg-id": "新昌生活"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "新沂新闻",
@@ -2225,16 +2279,14 @@
     {
       "name": "旺苍新闻综合",
       "group": "地方频道",
-      "url": "http://live.spccmc.com:90/live/spxwzh.m3u8?%E5%85%B3%E6%B3%A8%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7[%E6%99%B4%E5%9B%AD]",
+      "url": "http://channel.wcrmt.cn:80/nmip-media/channellive/channel105268/playlist.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "旺苍新闻综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "昌黎综合",
@@ -2273,10 +2325,8 @@
       "metadata": {
         "tvg-id": "晋江电视台"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "普陀电视台",
@@ -2287,10 +2337,10 @@
       "metadata": {
         "tvg-id": "普陀电视台"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "朝天综合",
@@ -2341,8 +2391,10 @@
       "metadata": {
         "tvg-id": "松阳综合"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "柳河综合",
@@ -2397,14 +2449,16 @@
     {
       "name": "武义新闻综合",
       "group": "地方频道",
-      "url": "http://l.cztvcloud.com/channels/lantian/SXwuyi1/720p.m3u8?zzhed",
+      "url": "http://l.cztvcloud.com/channels/lantian/SXwuyi1/720p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "武义新闻综合"
       },
       "ok": false,
-      "error": "decode_timeout"
+      "width": 720,
+      "height": 576,
+      "decodedSamples": 6
     },
     {
       "name": "武汉一台新闻综合",
@@ -2426,20 +2480,6 @@
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "武进新闻"
-      },
-      "ok": false,
-      "width": 720,
-      "height": 576,
-      "decodedSamples": 6
-    },
-    {
-      "name": "武进生活",
-      "group": "地方频道",
-      "url": "http://live.wjyanghu.com/live/CH2.m3u8",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "武进生活"
       },
       "ok": false,
       "width": 720,
@@ -2496,9 +2536,7 @@
         "tvg-id": "江夏新闻综合"
       },
       "ok": false,
-      "width": 720,
-      "height": 576,
-      "decodedSamples": 6
+      "error": "decode_timeout"
     },
     {
       "name": "汪清综合",
@@ -2524,6 +2562,20 @@
       "ok": true,
       "width": 1280,
       "height": 720,
+      "decodedSamples": 6
+    },
+    {
+      "name": "汾西综合",
+      "group": "地方频道",
+      "url": "https://qmmqvzoz.live.sxmty.com/live/hls/f24f8a390c084386a564074c9260100c/be3fdf07606145739ab2c4b80fe0136a.m3u8?zshanxd",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "metadata": {
+        "tvg-id": "汾西综合"
+      },
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
       "decodedSamples": 6
     },
     {
@@ -2600,7 +2652,9 @@
         "tvg-id": "洞头综合"
       },
       "ok": false,
-      "error": "decode_timeout"
+      "width": 720,
+      "height": 540,
+      "decodedSamples": 6
     },
     {
       "name": "津南一套",
@@ -2647,11 +2701,11 @@
     {
       "name": "浙江国际",
       "group": "地方频道",
-      "url": "http://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8",
+      "url": "https://ali-m-l.cztv.com/channels/lantian/channel010/1080p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "浙江国际"
+        "tvg-id": "4"
       },
       "ok": true,
       "width": 1920,
@@ -2703,11 +2757,11 @@
     {
       "name": "浙江新闻",
       "group": "地方频道",
-      "url": "http://ali-m-l.cztv.com/channels/lantian/channel007/720p.m3u8",
+      "url": "http://ali-m-l.cztv.com/channels/lantian/channel07/720p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "浙江新闻频道"
+        "tvg-id": "3"
       },
       "ok": true,
       "width": 1280,
@@ -2717,11 +2771,11 @@
     {
       "name": "浙江民生",
       "group": "地方频道",
-      "url": "https://ali-m-l.cztv.com/channels/lantian/channel006/1080p.m3u8",
+      "url": "http://ali-m-l.cztv.com/channels/lantian/channel06/1080p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
-        "tvg-id": "浙江民生"
+        "tvg-id": "4"
       },
       "ok": true,
       "width": 1920,
@@ -2773,15 +2827,15 @@
     {
       "name": "浙江经济",
       "group": "地方频道",
-      "url": "http://ali-m-l.cztv.com/channels/lantian/channel03/720p.m3u8",
+      "url": "https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "浙江经济"
       },
       "ok": true,
-      "width": 1280,
-      "height": 720,
+      "width": 1920,
+      "height": 1080,
       "decodedSamples": 6
     },
     {
@@ -2801,15 +2855,15 @@
     {
       "name": "浙江经视",
       "group": "地方频道",
-      "url": "http://ali-m-l.cztv.com/channels/lantian/channel003/720p.m3u8",
+      "url": "https://ali-m-l.cztv.com/channels/lantian/channel003/1080p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "浙江经视"
       },
       "ok": true,
-      "width": 1280,
-      "height": 720,
+      "width": 1920,
+      "height": 1080,
       "decodedSamples": 6
     },
     {
@@ -2835,21 +2889,23 @@
       "metadata": {
         "tvg-id": "浙江钱江"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "浙江钱江都市",
       "group": "地方频道",
-      "url": "http://ali-xwl.cztv.com/live/channel02720Plxw.m3u8",
+      "url": "http://ali-xwl.cztv.com/live/channel021080Plxw.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "浙江钱江都市"
       },
       "ok": true,
-      "width": 1280,
-      "height": 720,
+      "width": 1920,
+      "height": 1080,
       "decodedSamples": 6
     },
     {
@@ -2955,10 +3011,8 @@
       "metadata": {
         "tvg-id": "湖州公共民生"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "湖州文化娱乐",
@@ -2969,10 +3023,8 @@
       "metadata": {
         "tvg-id": "湖州文化娱乐"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "湖州新闻综合",
@@ -2983,10 +3035,8 @@
       "metadata": {
         "tvg-id": "湖州新闻综合"
       },
-      "ok": true,
-      "width": 1280,
-      "height": 720,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "滦平新闻",
@@ -3011,10 +3061,10 @@
       "metadata": {
         "tvg-id": "滨海新闻综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "灌阳新闻综合",
@@ -3211,18 +3261,6 @@
       "decodedSamples": 6
     },
     {
-      "name": "福建公共",
-      "group": "地方频道",
-      "url": "https://live.264788.xyz/channel/fujianxiangcungonggong?streamid=1cf7fc3a8f6d160c33b43c2f9507a0cc&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "福建公共"
-      },
-      "ok": false,
-      "error": "HTTPError"
-    },
-    {
       "name": "福建新闻",
       "group": "地方频道",
       "url": "http://satellitepull.cnr.cn/live/wx32fjxwgb/playlist.m3u8",
@@ -3235,18 +3273,6 @@
       "width": 0,
       "height": 0,
       "decodedSamples": 0
-    },
-    {
-      "name": "福建旅游",
-      "group": "地方频道",
-      "url": "https://live.264788.xyz/channel/fujianlvyou?streamid=fc58882de71ce4575b66002f2475226b&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "福建旅游"
-      },
-      "ok": false,
-      "error": "HTTPError"
     },
     {
       "name": "福建经济",
@@ -3309,8 +3335,10 @@
       "metadata": {
         "tvg-id": "缙云新闻综合"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "缙云综合",
@@ -3321,8 +3349,10 @@
       "metadata": {
         "tvg-id": "缙云新闻综合"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "舒兰新闻综合",
@@ -3345,10 +3375,10 @@
       "metadata": {
         "tvg-id": "苍南新闻综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "苏州文化生活",
@@ -3409,16 +3439,16 @@
     {
       "name": "荆门新闻综合",
       "group": "地方频道",
-      "url": "http://stream.jmtv.com.cn/xwzh/sd/live.m3u8",
+      "url": "https://stream.jmtv.com.cn/xwzh/playlist.m3u8?_upt=3e28e7271664278691",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "荆门新闻综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "荥经综合",
@@ -3437,7 +3467,7 @@
     {
       "name": "荥阳综合",
       "group": "地方频道",
-      "url": "http://tvpull.dxhmt.cn:9081/tv/10182-1.m3u8?zhend",
+      "url": "http://tvpull.dxhmt.cn:9081/tv/10182-1.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
@@ -3469,22 +3499,24 @@
       "metadata": {
         "tvg-id": "萧山新闻综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "萧山生活",
       "group": "地方频道",
-      "url": "https://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8",
+      "url": "http://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "萧山生活"
       },
-      "ok": false,
-      "error": "URLError"
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "萧山综合",
@@ -3563,10 +3595,10 @@
       "metadata": {
         "tvg-id": "西峰综合"
       },
-      "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "ok": true,
+      "width": 1280,
+      "height": 720,
+      "decodedSamples": 6
     },
     {
       "name": "诸暨新闻综合",
@@ -3655,10 +3687,8 @@
       "metadata": {
         "tvg-id": "通海电视台"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "遂昌综合",
@@ -3835,10 +3865,8 @@
       "metadata": {
         "tvg-id": "镇江新闻综合"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "URLError"
     },
     {
       "name": "长子综合",
@@ -3849,8 +3877,10 @@
       "metadata": {
         "tvg-id": "长子综合"
       },
-      "ok": false,
-      "error": "decode_timeout"
+      "ok": true,
+      "width": 1920,
+      "height": 1080,
+      "decodedSamples": 6
     },
     {
       "name": "长影频道",
@@ -3862,9 +3892,7 @@
         "tvg-id": "长影频道"
       },
       "ok": false,
-      "width": 0,
-      "height": 0,
-      "decodedSamples": 0
+      "error": "decode_timeout"
     },
     {
       "name": "长沙新闻综合",
@@ -4131,15 +4159,15 @@
     {
       "name": "之江纪录",
       "group": "纪录频道",
-      "url": "http://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8",
+      "url": "https://ali-m-l.cztv.com/channels/lantian/channel12/720p.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "metadata": {
         "tvg-id": "之江纪录"
       },
       "ok": true,
-      "width": 1920,
-      "height": 1080,
+      "width": 1280,
+      "height": 720,
       "decodedSamples": 6
     },
     {
@@ -4167,18 +4195,6 @@
       "width": 480,
       "height": 270,
       "decodedSamples": 6
-    },
-    {
-      "name": "兵团五师双河影",
-      "group": "纪录频道",
-      "url": "https://liveout.btzx.com.cn/62ds9e/6o77s4.m3u8?zxinjd",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "兵团五师双河影"
-      },
-      "ok": false,
-      "error": "HTTPError"
     },
     {
       "name": "双辽",
@@ -4251,10 +4267,8 @@
       "metadata": {
         "tvg-id": "江津新闻"
       },
-      "ok": true,
-      "width": 1920,
-      "height": 1080,
-      "decodedSamples": 6
+      "ok": false,
+      "error": "decode_timeout"
     },
     {
       "name": "汪清",
@@ -4445,18 +4459,6 @@
       "width": 0,
       "height": 0,
       "decodedSamples": 0
-    },
-    {
-      "name": "风云音乐",
-      "group": "音乐频道",
-      "url": "https://live.264788.xyz/channel/fengyunyinyue?streamid=1b41fb9153cba3ee19bd5d1b323da27e&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "metadata": {
-        "tvg-id": "风云音乐"
-      },
-      "ok": false,
-      "error": "HTTPError"
     },
     {
       "name": "1987年春晚",
@@ -6023,9 +6025,9 @@
       "error": "URLError"
     },
     {
-      "name": "北京卫视",
+      "name": "四川卫视",
       "group": "卫视频道",
-      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226450/index.m3u8",
+      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226338/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
       "metadata": {},
@@ -6053,29 +6055,9 @@
       "error": "URLError"
     },
     {
-      "name": "江苏卫视",
-      "group": "卫视频道",
-      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226310/index.m3u8",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
-      "metadata": {},
-      "ok": false,
-      "error": "URLError"
-    },
-    {
       "name": "河北卫视",
       "group": "卫视频道",
       "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226406/index.m3u8",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
-      "metadata": {},
-      "ok": false,
-      "error": "URLError"
-    },
-    {
-      "name": "河南卫视",
-      "group": "卫视频道",
-      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226480/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
       "metadata": {},
@@ -6093,9 +6075,9 @@
       "error": "URLError"
     },
     {
-      "name": "湖北卫视",
+      "name": "贵州卫视",
       "group": "卫视频道",
-      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226477/index.m3u8",
+      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226474/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
       "metadata": {},
@@ -6103,9 +6085,19 @@
       "error": "URLError"
     },
     {
-      "name": "重庆卫视",
+      "name": "宁夏卫视",
       "group": "卫视频道",
-      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226409/index.m3u8",
+      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225632/index.m3u8",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
+      "metadata": {},
+      "ok": false,
+      "error": "URLError"
+    },
+    {
+      "name": "陕西卫视",
+      "group": "卫视频道",
+      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225625/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
       "metadata": {},
@@ -6223,6 +6215,16 @@
       "error": "URLError"
     },
     {
+      "name": "北京卫视",
+      "group": "卫视频道",
+      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226450/index.m3u8",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
+      "metadata": {},
+      "ok": false,
+      "error": "URLError"
+    },
+    {
       "name": "东方卫视",
       "group": "卫视频道",
       "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226345/index.m3u8",
@@ -6263,9 +6265,19 @@
       "error": "URLError"
     },
     {
-      "name": "贵州卫视",
+      "name": "河南卫视",
       "group": "卫视频道",
-      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226474/index.m3u8",
+      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226480/index.m3u8",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
+      "metadata": {},
+      "ok": false,
+      "error": "URLError"
+    },
+    {
+      "name": "湖北卫视",
+      "group": "卫视频道",
+      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226477/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
       "metadata": {},
@@ -6276,6 +6288,16 @@
       "name": "湖南卫视",
       "group": "卫视频道",
       "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226307/index.m3u8",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
+      "metadata": {},
+      "ok": false,
+      "error": "URLError"
+    },
+    {
+      "name": "江苏卫视",
+      "group": "卫视频道",
+      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226310/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
       "metadata": {},
@@ -6303,16 +6325,6 @@
       "error": "URLError"
     },
     {
-      "name": "宁夏卫视",
-      "group": "卫视频道",
-      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225632/index.m3u8",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
-      "metadata": {},
-      "ok": false,
-      "error": "URLError"
-    },
-    {
       "name": "山西卫视",
       "group": "卫视频道",
       "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225624/index.m3u8",
@@ -6323,29 +6335,9 @@
       "error": "URLError"
     },
     {
-      "name": "陕西卫视",
-      "group": "卫视频道",
-      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225625/index.m3u8",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
-      "metadata": {},
-      "ok": false,
-      "error": "URLError"
-    },
-    {
       "name": "深圳卫视",
       "group": "卫视频道",
       "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226313/index.m3u8",
-      "headers": {},
-      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
-      "metadata": {},
-      "ok": false,
-      "error": "URLError"
-    },
-    {
-      "name": "四川卫视",
-      "group": "卫视频道",
-      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226338/index.m3u8",
       "headers": {},
       "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
       "metadata": {},
@@ -6403,6 +6395,16 @@
       "error": "URLError"
     },
     {
+      "name": "重庆卫视",
+      "group": "卫视频道",
+      "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226409/index.m3u8",
+      "headers": {},
+      "source": "https://raw.githubusercontent.com/ngo5/IPTV/main/m3u/ipv4.m3u",
+      "metadata": {},
+      "ok": false,
+      "error": "URLError"
+    },
+    {
       "name": "黑龙江卫视",
       "group": "卫视频道",
       "url": "http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226327/index.m3u8",
@@ -6448,7 +6450,7 @@
       "ok": true,
       "width": 1920,
       "height": 1080,
-      "decodedSamples": 5
+      "decodedSamples": 6
     },
     {
       "name": "伊犁维吾尔",
